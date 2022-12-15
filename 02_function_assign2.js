@@ -1,13 +1,6 @@
 function bankDetails(bankName, accountNum, location, pinCode) {
-  console.log(
-    "My Bank details are as follows: ",
-    "Bank Name: " + bankName,
-    "...",
-    "Ac No: " + accountNum,
-    "...",
-    "Branch: " + location,
-    "...",
-    "Pincode: " + pinCode
+  console.log("My Bank details are as follows: ","Bank Name: " + bankName,"...","Ac No: " + accountNum,"...",
+  "Branch: " + location,"...","Pincode: " + pinCode
   );
 }
 
