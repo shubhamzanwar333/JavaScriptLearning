@@ -28,9 +28,9 @@ const person = {
   weight: 70,
   age: 23,
   name: "Billgates",
-  speak: function(){
-    console.log(`Hey I can speak English and Hindi`);
-  }
+  company: "Microsoft",
+    valuation: "130B $"
+
 
 }
 console.log(typeof person);
@@ -64,8 +64,27 @@ mobile.company = "Micromax";
 mobile.camera = "20Px";
 console.log(mobile);
 
+console.log(`========== For in loop===========`);
+for (const key in person) {
+  if (Object.hasOwnProperty.call(person, key)) {
+    const element = person[key];
+    console.log(element);
+  }
+}
+
+console.log(`========== in operator ================`);
+ let isAvailable = "height" in person;
+ 
+ if (isAvailable) {
+    delete person.height;
+    console.log(`"height" property is deleted successfully`);
+ } else{
+    console.log(`"height" property not deleted as it is available inside object`);
+ }
 
 
+
+console.log(``);
 
 console.log(`Nested object`);
 const student = {
