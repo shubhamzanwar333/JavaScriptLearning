@@ -72,14 +72,12 @@ let isPrime = true ;
 
         if (num<=0){
             console.log(`${num} is Invalid number. Please provide number greater than 0.`);
-            
+        
         }
-        else if(num == 1){
-            console.log(`${num} is nor prime number nor composite number`);
-        }
+       
         else if(num>1){
-            for (let index = num; index > 1; index--) {
-                if(num%2==0) {
+            for (let index = 2; index < num; index++) {
+                if(num%index==0) {
                     isPrime = false ;
                     break;
                 } 
@@ -90,20 +88,40 @@ let isPrime = true ;
         } else {
             console.log(`${num} is a not a prime number`);
         }
+      
+      if(num == 1)  {
+            console.log(`${num} is nor prime/composite number`);
+        }
+    
     }
+    
     primeNumber(5);
 
+    // var num=1;
+    // var prime=true;
+    // if(num<=0)
+    // {
+    //     console.log("not valid number");
+    
+    // }
+    //  else if(num>1) {
+    // for(i=2;i<num;i++){
+    //     if(num%i==0)
+    //     {
+    //       prime=false;  
+    //     }
+    // }
+    //     if(prime)
+    //     {
+    //         console.log(`Given mumber  is prime number`);
+    //     }
+    //     else{
+    //         console.log(`Given number is not prime number`);
+    //     }
+    // }
+    // else{
+    //     console.log(`given number is neighter perime number nor composite number`);
+    // }
 
 
 
-
-
-
-// }
-// if(isPrime) {
-//     console.log(`Number is a prime number`);
-// }
-// else {
-//     console.log(`Number is not a prime number`);
-// }
-// }

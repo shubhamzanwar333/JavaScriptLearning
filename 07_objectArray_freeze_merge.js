@@ -18,11 +18,14 @@ console.log(collegeDetails);
 console.log(`-----------------------------------------------------------------------------------`);
 console.log(`3) Merging both the Objects`);
 
-personalDetails = collegeDetails;
-console.log(`personalDetails :`);
-console.log(personalDetails);
-console.log(`collegeDetails :`);
-console.log(collegeDetails);
+
+const mergedObj = Object.assign({}, personalDetails, collegeDetails);
+console.log(mergedObj);
+// personalDetails = collegeDetails;
+// console.log(`personalDetails :`);
+// console.log(personalDetails);
+// console.log(`collegeDetails :`);
+// console.log(collegeDetails);
 
 console.log(`----------------------------------------------------------------------------------`);
 console.log(`4) Create a array of friends name and freeze it`);
@@ -41,6 +44,28 @@ for (const element of friendsArray) {
 }
 console.log(`----------------------------------------------------------------------------------`);
 console.log(`6) Reverse a specific word in the string`);
-console.log(`Before reversing : CODEMIND TECHNOLOGY`);
-console.log(`After reversing : CODEMIND YGOLONHCET`);
-console.log(`----------------------------------------------------------------------------------`);
+
+
+let str = "CODEMIND TECHNOLOGY";
+let strLength = str.length;
+let newStr1 = "";
+let newStr2 = "";
+for (let index = strLength-1; index >=0; index--) {
+    
+    if(str.charAt(index)== " "){
+        break;
+    }
+    else {
+        newStr1 = newStr1 + str.charAt(index);
+    }   
+}
+for (let index = 0; index < strLength; index++) {
+    if(str.charAt(index)== " "){
+        break;
+    }
+    else {
+        newStr2 = newStr2 + str.charAt(index);
+    }
+}
+let resultString = newStr2.concat(" " , newStr1);
+console.log(resultString);

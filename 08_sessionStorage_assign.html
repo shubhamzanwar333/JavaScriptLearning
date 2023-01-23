@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Session Storage  </title>
+    </head>
+    <body>
+        <h2> Session Storage Learning</h2>
+    
+
+        <script>
+            
+            window.sessionStorage.setItem("name", "Shubham Vitthaldas Zanwar");
+            window.sessionStorage.setItem("city", "Pune");
+            window.sessionStorage.setItem("pinCode", "411028");
+            window.sessionStorage.setItem("district", "Pune");
+            //const len = window.localStorage.length;
+            
+            const clgName = window.sessionStorage.getItem("college");
+            
+            window.sessionStorage.removeItem("city");
+            // window.sessionStorage.clear();
+        </script>
+    
+    
+       
+    </body>
+</html>
